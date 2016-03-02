@@ -1,13 +1,13 @@
 Package: raw
 Title: R Actuarial Workshops
-Description: Data for actuarial workshops
+Description: This package contains data for actuarial workshops.
 Version: 0.1.1
 Maintainer: Brian A. Fannin <BFannin@RedwoodsGroup.com>
 Authors@R: person("Brian A.", "Fannin"
     , role = c("aut", "cre")
     , email = "BFannin@RedwoodsGroup.com")
 LazyData: true
-License: GPL (>= 2)
+License: CC0
 Depends:
     R (>= 2.10)
 Suggests:
@@ -21,3 +21,4 @@ Suggests:
 VignetteBuilder: knitr
 Type: Package
 RoxygenNote: 5.0.1
+URL: http://pirategrunt.com/raw/
