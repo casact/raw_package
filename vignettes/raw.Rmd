@@ -1,0 +1,62 @@
+---
+title: "raw - R Actuarial Workshops"
+author: "Brian A. Fannin, ACAS"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{raw}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# raw - R Actuarial Workshops
+
+This is a packge which stores data used in R workshops sponsored by the Casualty Actuarial Society. This short vignette will describe the various data sets and give examples of their use.
+
+## Data
+
+Once the `raw` package has been installed, any of the data sets may be accessed. To get a list of the data sets available in any package in R, one may call the `data` function with the name of the package as an argument. To get help about any data set, one may use R's help facility to display the documentation for that data set. 
+
+```{r}
+data(package = "raw")
+```
+
+
+## COTOR
+
+There are four sets in all. Note that the numbering begins at 2. So far as I am aware, the data for the first COTOR challenge is not available from the CAS website.
+
+### COTOR 2
+
+### COTOR 3
+
+### COTOR 4
+
+### COTOR 5
+
+## PPA
+
+This is data taken from Appendix A of the [http://www.casact.org/library/studynotes/Werner_Modlin_Ratemaking.pdf]("Basic Ratemaking") study note by Werner and Modlin. This is a suite of data - six sets in all - pertaining to personal auto as follows:
+
+* Rate change
+* 
+
+```{r}
+data(PPA)
+```
+
+
+## Huricane
+
+```{r}
+
+```
+
+## Region and State Experience
+
+## NFL
+
+```{r}
+
+```
+
