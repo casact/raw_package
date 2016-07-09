@@ -1,3 +1,10 @@
+library(dplyr)
+source("./data-raw/CAS_reserves.R")
+
+lstSets <- lapply(datasets, FetchDataSet)
+names(lstSets) <- datasets
+mapply(lstSets, names(lstSets), FUN = SaveDataSet)
+
 load("./data/ppauto.rda")
 dfPPA <- ppauto
 
@@ -5,20 +12,6 @@ load("./data/wkcomp.rda")
 dfWC = wkcomp
 
 rm(ppauto, wkcomp)
-
-NewColnames = c("GroupCode"
-             , "Company"
-             , "AccidentYear"
-             , "DevelopmentYear"
-             , "Lag"
-             , "CumulativeIncurred"
-             , "CumulativePaid"
-             , "IBNR"
-             , "DirectEP"
-             , "CededEP"
-             , "NetEP"
-             , "Single"
-             , "Reserve1997")
 
 colnames(dfPPA) = NewColnames
 colnames(dfWC) = NewColnames

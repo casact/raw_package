@@ -1,7 +1,7 @@
 FetchDataSet <- function(stub){
   URL.stem = "http://www.casact.org/research/reserve_data/"
   URL <- paste0(URL.stem, stub, "_pos.csv")
-  df <- read.csv(URL, stringsAsFactors = FALSE)
+  df <- readr::read_csv(URL, col_types = "iciiiddddddid")
 }
 
 SaveDataSet <- function(df, name){
@@ -13,6 +13,16 @@ SaveDataSet <- function(df, name){
 datasets <- c("ppauto", "wkcomp", "comauto", "medmal"
               , "prodliab", "othliab")
 
-lstSets <- lapply(datasets, FetchDataSet)
-names(lstSets) <- datasets
-mapply(lstSets, names(lstSets), FUN = SaveDataSet)
+NewColnames <- c("GroupCode"
+                , "Company"
+                , "AccidentYear"
+                , "DevelopmentYear"
+                , "Lag"
+                , "CumulativeIncurred"
+                , "CumulativePaid"
+                , "IBNR"
+                , "DirectEP"
+                , "CededEP"
+                , "NetEP"
+                , "Single"
+                , "Reserve1997")
