@@ -2,14 +2,14 @@ Package: raw
 Title: R Actuarial Workshops
 Description: This package contains data for actuarial workshops.
 Version: 0.1.1
-Maintainer: Brian A. Fannin <BFannin@RedwoodsGroup.com>
+Maintainer: Brian A. Fannin <FanninQED@yahoo.com>
 Authors@R: person("Brian A.", "Fannin"
     , role = c("aut", "cre")
-    , email = "BFannin@RedwoodsGroup.com")
+    , email = "FanninQED@yahoo.com")
 LazyData: true
 License: CC0
 Depends:
-    R (>= 2.10)
+    R (>= 3.0)
 Suggests:
     dplyr,
     tidyr,
@@ -17,7 +17,10 @@ Suggests:
     lubridate,
     actuar,
     ChainLadder,
-    knitr
+    knitr,
+    readr,
+    readxl,
+    rmarkdown
 VignetteBuilder: knitr
 Type: Package
 RoxygenNote: 5.0.1
