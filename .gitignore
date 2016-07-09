@@ -15,7 +15,6 @@
 *.aux
 *.vrb
 *.tex
-
 *.doc*
 
 *.tex
@@ -34,3 +33,5 @@ workshop/word/*
 workshop/beamer/*
 data-raw/Werner_Modlin_Ratemaking.pdf
 *.csv
+.Rproj.user
+inst/doc
