@@ -1,0 +1,36 @@
+# History files
+.Rhistory
+*.Rdata
+
+# Example code in package build process
+*-Ex.R
+.Rproj.user
+
+# Tex files
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.aux
+*.vrb
+*.tex
+
+*.doc*
+
+*.tex
+*.RData
+*.RData
+*.RData
+*.tex
+
+*.html
+
+workshop/*.pdf
+workshop/*.zip
+workshop/pdf/*
+workshop/html/*
+workshop/word/*
+workshop/beamer/*
+data-raw/Werner_Modlin_Ratemaking.pdf
+*.csv

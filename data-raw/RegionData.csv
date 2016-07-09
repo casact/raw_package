@@ -1,0 +1,45 @@
+"Region","PolicyYear","NumPolicies","NumClaims"
+"North Central",2000,576,4318
+"North Central",2001,579,4377
+"North Central",2002,585,4343
+"North Central",2003,588,4384
+"North Central",2004,593,4374
+"North Central",2005,598,4394
+"North Central",2006,602,4399
+"North Central",2007,608,4520
+"North Central",2008,612,4533
+"North Central",2009,616,4558
+"North Central",2010,620,4598
+"Northeast",2000,495,3510
+"Northeast",2001,501,3556
+"Northeast",2002,506,3618
+"Northeast",2003,512,3574
+"Northeast",2004,517,3679
+"Northeast",2005,524,3715
+"Northeast",2006,530,3739
+"Northeast",2007,538,3798
+"Northeast",2008,543,3753
+"Northeast",2009,550,3863
+"Northeast",2010,556,3964
+"South",2000,672,7507
+"South",2001,685,7606
+"South",2002,696,7888
+"South",2003,708,8080
+"South",2004,720,8074
+"South",2005,736,8387
+"South",2006,748,8268
+"South",2007,761,8423
+"South",2008,774,8715
+"South",2009,788,8900
+"South",2010,804,9026
+"West",2000,379,3229
+"West",2001,381,3196
+"West",2002,385,3206
+"West",2003,391,3392
+"West",2004,395,3359
+"West",2005,398,3392
+"West",2006,401,3403
+"West",2007,407,3527
+"West",2008,410,3558
+"West",2009,416,3552
+"West",2010,420,3557
