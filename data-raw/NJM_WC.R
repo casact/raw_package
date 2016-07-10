@@ -9,5 +9,5 @@ NJM_WC <- NJM_WC %>%
   filter(GroupCode == 7080)
 
 save(NJM_WC
-     , file = "./data/NJ_WCM.rda"
+     , file = "./data/NJM_WC.rda"
      , compress = "xz")
