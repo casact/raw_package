@@ -1,6 +1,9 @@
 Package: raw
 Title: R Actuarial Workshops
-Description: This package contains data for actuarial workshops.
+Description: In order to facilitate R instruction for actuaries, we have organized several 
+  sets of publicly available data of interest to non-life actuaries. In addition, we suggest 
+  a set of packages, which most practicing actuaries will use routinely. Finally, there is 
+  an R markdown skeleton for basic reserve analysis.
 Version: 0.1.1
 Maintainer: Brian A. Fannin <FanninQED@yahoo.com>
 Authors@R: person("Brian A.", "Fannin"
