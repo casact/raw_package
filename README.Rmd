@@ -1,5 +1,7 @@
 ---
+output: md_document
 ---
+
 [![Travis-CI Build Status](https://travis-ci.org/PirateGrunt/raw_package.svg?branch=master)](https://travis-ci.org/PirateGrunt/raw_package)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/raw)](https://cran.r-project.org/package=raw)
 [![packageversion](https://img.shields.io/badge/Package%20version-0.1.1-orange.svg?style=flat-square)](commits/master)
@@ -10,4 +12,11 @@
 
 # raw
  
-`raw` is a package for R Actuarial Workshops. This package has data relevant to actuarial work.
+In order to facilitate R instruction for actuaries, we have organized several sets of publicly available data of interest to non-life actuaries. In addition, we suggest a set of packages, which most practicing actuaries will use routinely. Finally, there is an R markdown skeleton for basic reserve analysis.
+
+```
+devtools::install_github("raw")
+library(raw)
+data(Hurricane)
+head(Hurricane)
+```
