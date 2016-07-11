@@ -1,0 +1,124 @@
+---
+title: "CLRS 2016 Reserve Example"
+author: "SFR Actuarial Consulting, Inc."
+date: "`r Sys.Date()`"
+params:
+  client: 
+  valuationDate: 
+  informationDate: 
+  accountingDate: 
+output:
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Executive Summary
+
+- Executive point 1
+- Executive point 2
+
+### Relevant Dates
+
+The relevant dates for our analysis are as follows:  
+
+* Accounting date: `r params$accountingDate`  
+* Valuation date: `r proj_info$valuationDate`  
+* Information date: `r proj_info$informationDate`
+
+### Scope of analysis
+
+The scope of our analysis is to _State scope_ for `r params$client`.
+
+### Acknowledgement
+
+Any questions related to this report should be directed to:
+
+Consultant, Credentials
+(###) ###-####  
+<consultatnt@consultancy.com>
+
+Other consultant, Credentials
+(###) ###-####  
+<consultatnt@consultancy.com>
+
+```{r message = FALSE, warning=FALSE, results='hide'}
+my_packages <- list("dplyr", "magrittr", "lubridate", "htmlTable", "knitr", 
+  "xtable", "ChainLadder", "scales", "highcharter")
+sapply(X = my_packages, FUN = library, character.only = TRUE)
+```
+
+## Data
+
+The data underlying this analysis was provided by _data provider_. We downloaded the data on `r format(Sys.time(), "%A, %b %d, %Y at %X")`.
+
+We sumamrize that data in the table below:
+
+```{r echo=FALSE}
+```
+
+## Historical Loss Development
+
+### Paid Loss Development Experience
+
+We present paid loss development experience in the triangle below.  
+
+```{r echo=FALSE}
+
+```
+
+### Incurred Loss Development Experience
+
+We present incurred loss development experience in the triangle below:
+
+```{r echo=FALSE}
+
+```
+
+### Obseravtions and Comments
+
+In our review of the development experience, we noted the follwing:  
+
+- Note 1
+- Note 2
+
+## Ultimate Loss Projections
+
+### Method 1
+
+```{r }
+```
+
+### Method 2
+
+```{r }
+```
+
+### Method 3
+
+```{r }
+```
+
+## Comparison of Methods
+
+## R packages
+
+We used the following `R` packagaes to develop this analysis:  
+
+- `r citation()$textVersion` - 
+- `r citation('ChainLadder')$textVersion`
+
+```{r}
+lapply(my_packages, citation)
+```
+
+## References
+
+## R Session Info
+
+```{r echo=FALSE}
+sessionInfo()
+```
+
