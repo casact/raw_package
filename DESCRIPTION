@@ -23,7 +23,13 @@ Suggests:
     knitr,
     readr,
     readxl,
-    rmarkdown
+    rmarkdown,
+    mondate,
+    FinCal,
+    rstan,
+    scales,
+    nlme,
+    RODBC
 VignetteBuilder: knitr
 Type: Package
 RoxygenNote: 5.0.1
