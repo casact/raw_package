@@ -28,8 +28,7 @@ Suggests:
     FinCal,
     rstan,
     scales,
-    nlme,
-    RODBC
+    nlme
 VignetteBuilder: knitr
 Type: Package
 RoxygenNote: 5.0.1
