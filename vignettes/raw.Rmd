@@ -60,3 +60,24 @@ data(PPA)
 
 ```
 
+# Suggested Packages
+
+## dplyr 
+
+## tidyr 
+
+## ggplot2
+
+## lubridate
+
+## actuar
+
+## ChainLadder
+
+## knitr
+
+## readr
+
+## readxl
+
+## rmarkdown
