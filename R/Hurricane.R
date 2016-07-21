@@ -1,4 +1,4 @@
-#' @name Hurricane-
+#' @name Hurricane
 #' 
 #' @title Hurricane data
 #' 
