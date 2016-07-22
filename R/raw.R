@@ -2,11 +2,12 @@
 #' 
 #' This is a packge which stores data used in R workshops sponsored by the Casualty Actuarial Society. 
 #' 
-#' For more information, read the package vignette.
+#' For more information, read the package vignette. To access the package vignette, type in the code shown in the 
+#' Examples section (the line without the hash marks).
 #' 
 #' @examples
 #' \dontrun{
-#' vignette(package = "raw")
+#' vignette(topic = "raw")
 #' }
 #' 
 #' @docType package

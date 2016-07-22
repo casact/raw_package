@@ -4,15 +4,24 @@
 \name{StateExperience}
 \alias{StateExperience}
 \title{State data}
-\format{A data frame with 7 variables:
-   \code{Fullname}, \code{PolicyYear}, \code{Postal}
-   , \code{NumPolicies}, \code{PolicyGrowth}, \code{Lambda}
-   , \code{BasePolicies}, \code{NumClaims}, \code{Region}}
+\format{An object of class \code{data.frame} with 500 rows and 6 columns.}
 \usage{
-StateExperience
+data(StateExperience)
 }
 \description{
 Random illustrative data
+
+\itemize{
+   \item Region: The name of the region to which the state belongs
+   \item State: The name of the state
+   \item Postal: Two character postal code for the state
+   \item PolicyYear: An integer between 2001 and 2010.
+   \item NumPolicies: Integer giving the number of policies in that region for that policy year
+   \item NumClaims: Integer giving the number of claims in that region for that policy year
+}
+}
+\seealso{
+\code{\link{RegionExperience}}
 }
 \keyword{datasets}
 

@@ -9,9 +9,9 @@
 data(Hurricane)
 }
 \description{
-Listing of the position of and windspeed of hurricanes from 1970 through 2011.
+Listing of the position and windspeed of hurricanes from 1970 through 2011.
 
-Data is taken from the National Hurricane Center, a division of the National Oceanic and Atmospheric Association. The data may be
+Data is taken from the \href{http://www.noaa.gov/}{National Hurricane Center}, a division of the National Oceanic and Atmospheric Association. The data may be
 obtained here: \href{ftp://eclipse.ncdc.noaa.gov/pub/ibtracs/v03r04/wmo/csv/basin/Basin.NA.ibtracs_wmo.v03r04.csv}{NOAA ftp}. A 
 description of the data as well as data for storms in other regions may be found 
 here: \href{https://www.ncdc.noaa.gov/ibtracs/index.php?name=wmo-data}{IBTrACS}.

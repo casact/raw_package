@@ -2,15 +2,24 @@
 #' 
 #' @title State data
 #' 
+#' @seealso\code{\link{RegionExperience}}
+#' 
+#' @usage 
+#' 
+#' data(StateExperience)
+#' 
 #' @description
 #' 
 #' Random illustrative data
 #' 
-#' @format A data frame with 7 variables:
-#'    \code{Fullname}, \code{PolicyYear}, \code{Postal}
-#'    , \code{NumPolicies}, \code{PolicyGrowth}, \code{Lambda}
-#'    , \code{BasePolicies}, \code{NumClaims}, \code{Region}
-#' 
+#' \itemize{
+#'    \item Region: The name of the region to which the state belongs
+#'    \item State: The name of the state
+#'    \item Postal: Two character postal code for the state
+#'    \item PolicyYear: An integer between 2001 and 2010.
+#'    \item NumPolicies: Integer giving the number of policies in that region for that policy year
+#'    \item NumClaims: Integer giving the number of claims in that region for that policy year
+#' }
 "StateExperience"
 
 #' @name RegionExperience
@@ -19,9 +28,18 @@
 #' 
 #' @description
 #' 
-#' Consolidation of state data into various regions
+#' Consolidation of state data into various regions. The state data was generated randomly as a Poisson sample.
 #' 
-#' @format A data frame with four variables:
-#'    \code{Region}, \code{PolicyYear}
-#'    , \code{NumPolicies}, \code{NumClaims}
+#' \itemize{
+#'  \item Region: The name of the region
+#'  \item PolicyYear: An integer between 2001 and 2010
+#'  \item NumPolicies: Integer giving the number of policies in that region for that policy year
+#'  \item NumClaims: Integer giving the number of claims in that region for that policy year
+#' }
+#' 
+#' @usage 
+#' 
+#' data(RegionExperience)
+#' 
+#' @seealso\code{\link{StateExperience}}
 "RegionExperience"

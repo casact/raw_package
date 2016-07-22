@@ -4,14 +4,22 @@
 \name{RegionExperience}
 \alias{RegionExperience}
 \title{Region data}
-\format{A data frame with four variables:
-   \code{Region}, \code{PolicyYear}
-   , \code{NumPolicies}, \code{NumClaims}}
+\format{An object of class \code{data.frame} with 40 rows and 4 columns.}
 \usage{
-RegionExperience
+data(RegionExperience)
 }
 \description{
-Consolidation of state data into various regions
+Consolidation of state data into various regions. The state data was generated randomly as a Poisson sample.
+
+\itemize{
+ \item Region: The name of the region
+ \item PolicyYear: An integer between 2001 and 2010
+ \item NumPolicies: Integer giving the number of policies in that region for that policy year
+ \item NumClaims: Integer giving the number of claims in that region for that policy year
+}
+}
+\seealso{
+\code{\link{StateExperience}}
 }
 \keyword{datasets}
 
