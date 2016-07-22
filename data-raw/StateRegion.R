@@ -1,42 +1,49 @@
 library(reshape2)
+library(dplyr)
 
 ConstructStateData <- function(strStateDataFile, strRegionDataFile){
   
-  set.seed(1234)
   data(state)
   
-  # Write state data
-  dfState = as.data.frame(cbind(state.abb, state.name, state.x77, as.character(state.division), as.character(state.region)))
-  colnames(dfState)[1:2] = c("Postal", "Fullname")
-  colnames(dfState)[11:12] = c("Division", "Region")
-  # dfState$Postal = tolower(dfState$Postal)
-  # dfState$Fullname = tolower(dfState$Fullname)
-  dfState$NumPolicies = round(as.numeric(as.character(dfState$Population)) / 100, 0)
-  dfState$PolicyGrowth = as.numeric(as.character(dfState$Illiteracy)) / 100
-  dfState$Lambda = as.numeric(as.character(dfState$Murder))
+  dfStateRegion <- as.data.frame(cbind(as.character(state.region), state.name, state.abb), stringsAsFactors = FALSE)
+  names(dfStateRegion) <- c("Region", "State", "Postal")
   
-  PolicyYear = 2000:2010
-  df = expand.grid(list(Fullname = dfState$Fullname, PolicyYear = PolicyYear))
+  dfState = as.data.frame(cbind(state.name
+                                , state.x77)
+                          , stringsAsFactors = FALSE) %>% 
+    select(State = state.name
+           , Population
+           , Illiteracy
+           , Murder) %>% 
+    mutate(NumPolicies = round(as.numeric(Population) / 100, 0)
+           , PolicyGrowth = as.numeric(Illiteracy) / 100
+           , Lambda = as.numeric(Murder)) %>% 
+    select(-Population, -Illiteracy, -Murder)
   
-  df = merge(df, dfState[, c("Postal", "Fullname", "NumPolicies", "PolicyGrowth", "Lambda")])
+  row.names(dfState) <- NULL
   
-  dfBase = df[df$PolicyYear == 2000, c("Fullname", "NumPolicies")]
-  colnames(dfBase)[2] = "BasePolicies"
+  PolicyYear = 2001:2010
+  dfStatePolicy = expand.grid(list(State = dfState$State, PolicyYear = PolicyYear))
   
-  df = merge(df, dfBase)
+  set.seed(1234)
   
-  df$NumPolicies = round(df$BasePolicies * (1 + df$PolicyGrowth)^(df$PolicyYear - 2000), 0)
-  df$NumClaims = rpois(nrow(df), df$NumPolicies * df$Lambda)
+  dfState <- merge(dfState, dfStatePolicy) %>% 
+    group_by(State) %>% 
+    arrange(State, PolicyYear) %>% 
+    mutate(PolicyGrowth = 1 + PolicyGrowth
+           , PolicyGrowth = cumprod(PolicyGrowth)
+           , NumPolicies = round(NumPolicies * PolicyGrowth, 0)
+           , NumClaims = rpois(length(PolicyYear), NumPolicies * Lambda)) %>% 
+    merge(dfStateRegion) %>% 
+    select(Region, State, Postal, PolicyYear, NumPolicies, NumClaims)
   
-  df = merge(df, dfState[, c("Fullname", "Region")])
-  df  
   
-  dfRegion = df[, c("Region", "PolicyYear", "NumPolicies", "NumClaims")]
-  
-  mdf = melt(dfRegion, id.vars = c("Region", "PolicyYear"))
-  dfRegion = dcast(mdf, Region + PolicyYear ~ variable, sum)
-  
-  write.csv(df, strStateDataFile, row.names = FALSE)
+  dfRegion <- dfState %>% 
+    group_by(Region, PolicyYear) %>% 
+    summarise(NumPolicies = sum(NumPolicies)
+              , NumClaims = sum(NumClaims))
+    
+  write.csv(dfState, strStateDataFile, row.names = FALSE)
   write.csv(dfRegion, strRegionDataFile, row.names = FALSE)
   
 }
