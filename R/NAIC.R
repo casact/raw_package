@@ -1,12 +1,12 @@
-#' FourCompanies
+#' MultiTri
 #' 
-#' @name FourCompanies
+#' @name MultiTri
 #' 
 #' @description 
 #' 
 #' Complete triangle of losses for the same 4 private passenger auto and workers comp companies. Data is taken from the CAS.
 #' 
-#' @seealso \code{\link{}}
+#' @seealso \code{\link{NAIC}}
 #' 
 #' \itemize{
 #'    \item GroupCode: NAIC company code
@@ -26,9 +26,9 @@
 #' 
 #' @source \url{http://www.casact.org/research/reserve_data/ppauto_pos.csv}
 #' @source \url{http://www.casact.org/research/reserve_data/wkcomp_pos.csv}
+#' @source \url{http://www.casact.org/research/reserve_data/othliab_pos.csv}
 #' @docType data
 #' 
-#' @aliases dfPPA dfWC
 NULL
 
 #' NAIC
