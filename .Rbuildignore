@@ -4,3 +4,6 @@
 ^\.travis\.yml$
 Makefile
 README*
+cran-comments.md
+inst/staticdocs
+inst/web
