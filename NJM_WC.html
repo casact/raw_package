@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>NJM_WC. raw 0.1.1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">raw 0.1.1</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-home icon-white"></i> Index</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>New Jersey Manufacturing Company Workers Comp Reserving Data</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><div>data(NJM_WC)</div></pre>
+        
+    <div class="Format">
+      <h2>Format</h2>
+
+      <p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 100 rows and 13 columns.</p>
+  
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+
+      <p>This data represents ten complete years of Schedule P workers comp development for the New Jersey Manufacturing Company. The data was
+prepared by Glenn Meyers and Peng Shi and is available from the CAS <a href = 'http://www.casact.org/research/index.cfm?fa=loss_reserves_data'>http://www.casact.org/research/index.cfm?fa=loss_reserves_data</a>.
+The columns have been given more user friendly names. The original column names may be restored by using the CasColNames function.</p>
+  
+      <p>This data has been included because it is the triangle used by Greg Taylor and Grainne McGuire in their monograph "Stochastic Loss
+Reserving Using Generalized Linear Models". <a href = 'http://www.casact.org/pubs/monographs/index.cfm?fa=taylor-monograph03'>http://www.casact.org/pubs/monographs/index.cfm?fa=taylor-monograph03</a></p>
+  
+      <p>This is a data frame with 100 observations of 13 variables.</p>
+  
+      <p><ul>
+<li> GroupCode: NAIC company code
+   </li>
+<li> Company 
+   </li>
+<li> AccidentYear
+   </li>
+<li> DevelopmentYear
+   </li>
+<li> Lag: Integer indicating the development lag in years.
+   </li>
+<li> CumulativeIncurred
+   </li>
+<li> CumulativePaid
+   </li>
+<li> IBNR: Bulk and IBNR reserves
+   </li>
+<li> DirectEP: Direct and assumed earned premium, gross of reinsurance.
+   </li>
+<li> CededEP: Earned premium ceded to reinsurers.
+   </li>
+<li> NetEP: Premium earned net of reinsurance.
+   </li>
+<li> Single: Either 1 or 0. 1 indicates a single entity, 0 indicates a group entity.
+   </li>
+<li> Reserve1997: Posted reserves as of year-end 1997.
+</li>
+</ul></p>
+  
+      <p></p>
+  
+    </div>
+      </div>
+  <div class="span4">
+    <!-- <ul>
+      <li>NJM_WC</li>
+    </ul>
+    <ul>
+      <li>datasets</li>
+    </ul> -->
+      
+        
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="https://getbootstrap.com/2.0.4/">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
