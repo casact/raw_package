@@ -12,7 +12,7 @@
 
 <meta name="author" content="Brian A. Fannin, ACAS" />
 
-<meta name="date" content="2016-07-23" />
+<meta name="date" content="2016-07-24" />
 
 <title>raw - R Actuarial Workshops</title>
 
@@ -70,82 +70,98 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">raw - R Actuarial Workshops</h1>
 <h4 class="author"><em>Brian A. Fannin, ACAS</em></h4>
-<h4 class="date"><em>2016-07-23</em></h4>
+<h4 class="date"><em>2016-07-24</em></h4>
 
 
 
 <div id="raw---r-actuarial-workshops" class="section level1">
 <h1>raw - R Actuarial Workshops</h1>
 <p>This is a packge which stores data used in R workshops sponsored by the Casualty Actuarial Society<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. This short vignette will describe the various data sets and give examples of their use. As well, there is a short note about each of the packages which we suggest be installed.</p>
-<div id="data" class="section level2">
-<h2>Data</h2>
+</div>
+<div id="data" class="section level1">
+<h1>Data</h1>
 <p>Once the <code>raw</code> package has been installed, any of the data sets may be accessed. To get a list of the data sets available in any package in R, one may call the <code>data</code> function with the name of the package as an argument. To get help about any data set, one may use R’s help facility to display the documentation for that data set.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(<span class="dt">package =</span> <span class="st">&quot;raw&quot;</span>)</code></pre></div>
+<div id="cotor" class="section level3">
+<h3>COTOR</h3>
+<p>There are four sets in all. Note that the numbering begins at 2. So far as I am aware, the data for the first COTOR challenge is not available from the CAS website. Each data set has a set of randomly generated non-life insurance claims.</p>
 </div>
-<div id="cotor" class="section level2">
-<h2>COTOR</h2>
-<p>There are four sets in all. Note that the numbering begins at 2. So far as I am aware, the data for the first COTOR challenge is not available from the CAS website.</p>
-<div id="cotor-2" class="section level3">
-<h3>COTOR 2</h3>
-</div>
-<div id="cotor-3" class="section level3">
-<h3>COTOR 3</h3>
-</div>
-<div id="cotor-4" class="section level3">
-<h3>COTOR 4</h3>
-</div>
-<div id="cotor-5" class="section level3">
-<h3>COTOR 5</h3>
-</div>
-</div>
-<div id="ppa" class="section level2">
-<h2>PPA</h2>
-<p>This is data taken from Appendix A of the <a href="%22Basic%20Ratemaking%22">http://www.casact.org/library/studynotes/Werner_Modlin_Ratemaking.pdf</a> study note by Werner and Modlin. This is a suite of data - six sets in all - pertaining to personal auto as follows:</p>
-<ul>
-<li>Rate change</li>
-<li></li>
-</ul>
+<div id="ppa" class="section level3">
+<h3>PPA</h3>
+<p>This is data taken from Appendix A of the <a href="%22Basic%20Ratemaking%22">http://www.casact.org/library/studynotes/Werner_Modlin_Ratemaking.pdf</a> study note by Werner and Modlin. This is a suite of data - six sets in all - pertaining to personal auto. More information may be found in the note itself.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(PPA)</code></pre></div>
 </div>
-<div id="huricane" class="section level2">
-<h2>Huricane</h2>
-<p>This</p>
+<div id="huricane" class="section level3">
+<h3>Huricane</h3>
+<p>This contains basic data</p>
 </div>
-<div id="region-and-state-experience" class="section level2">
-<h2>Region and State Experience</h2>
+<div id="region-and-state-experience" class="section level3">
+<h3>Region and State Experience</h3>
+<p>This is a simulated data set.</p>
 </div>
 </div>
 <div id="suggested-packages" class="section level1">
 <h1>Suggested Packages</h1>
-<div id="actuar" class="section level2">
-<h2>actuar</h2>
+<div id="actuarial-packages" class="section level2">
+<h2>Actuarial packages</h2>
+<div id="actuar" class="section level3">
+<h3>actuar</h3>
 </div>
-<div id="chainladder" class="section level2">
-<h2>ChainLadder</h2>
+<div id="chainladder" class="section level3">
+<h3>ChainLadder</h3>
 </div>
-<div id="dplyr" class="section level2">
-<h2>dplyr</h2>
+<div id="mondate" class="section level3">
+<h3>mondate</h3>
 </div>
-<div id="readr" class="section level2">
-<h2>readr</h2>
+<div id="fincal" class="section level3">
+<h3>FinCal</h3>
 </div>
-<div id="readxl" class="section level2">
-<h2>readxl</h2>
+<div id="rstan" class="section level3">
+<h3>rstan</h3>
 </div>
-<div id="tidyr" class="section level2">
-<h2>tidyr</h2>
+<div id="nlme" class="section level3">
+<h3>nlme</h3>
 </div>
-<div id="ggplot2" class="section level2">
-<h2>ggplot2</h2>
 </div>
-<div id="lubridate" class="section level2">
-<h2>lubridate</h2>
+<div id="the-hadleyverse" class="section level2">
+<h2>The Hadleyverse</h2>
+<div id="dplyr" class="section level3">
+<h3>dplyr</h3>
 </div>
-<div id="knitr" class="section level2">
-<h2>knitr</h2>
+<div id="readr" class="section level3">
+<h3>readr</h3>
 </div>
-<div id="rmarkdown" class="section level2">
-<h2>rmarkdown</h2>
+<div id="readxl" class="section level3">
+<h3>readxl</h3>
+</div>
+<div id="tidyr" class="section level3">
+<h3>tidyr</h3>
+</div>
+<div id="ggplot2" class="section level3">
+<h3>ggplot2</h3>
+</div>
+<div id="lubridate" class="section level3">
+<h3>lubridate</h3>
+</div>
+<div id="scales" class="section level3">
+<h3>scales</h3>
+</div>
+<div id="devtools" class="section level3">
+<h3>devtools</h3>
+</div>
+</div>
+<div id="documentation" class="section level2">
+<h2>Documentation</h2>
+<div id="knitr" class="section level3">
+<h3>knitr</h3>
+<p>The <a href="http://yihui.name/knitr/">knitr</a> package, written by Yihue Xie, enables a user to combine R code and documentation in a single file. That file may then be converted into a format like PDF, HTML or Word.</p>
+</div>
+<div id="rmarkdown" class="section level3">
+<h3>rmarkdown</h3>
+</div>
+</div>
+<div id="maps-and-maptools" class="section level2">
+<h2>maps and maptools</h2>
 </div>
 </div>
 <div class="footnotes">
