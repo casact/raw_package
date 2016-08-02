@@ -74,7 +74,7 @@ install.packages("raw", dependencies = "Suggests")
 
 ### actuar
 
-This contains a varied set of useful actuarial tools, from loss distributions to credibility to compound loss models. This also contains the data from the "Loss Models" textbook by Klugman, Panjer and Wilmot. Read more here: [actuar CRAN site](https://cran.r-project.org/web/packages/actuar/index.html).
+This contains a varied set of useful actuarial tools, from loss distributions to credibility to compound loss models. This also contains the data from the "Loss Models" textbook by Klugman, Panjer and Wilmot. Read more here: [https://cran.r-project.org/package=actuar](https://cran.r-project.org/package=actuar).
 
 ### ChainLadder
 
@@ -108,7 +108,7 @@ Hadley Wickham is an incredibly prolific and popular programmer who has made som
 
 ### dplyr
 
-I use the `dplyr` package on a daily basis. It has a simple, easy to understand grammar for data manipulation and summarization. Read the introduction here: [https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html). 
+I use the `dplyr` package on a daily basis. It has a simple, easy to understand grammar for data manipulation and summarization. Read the introduction here: [https://github.com/hadley/dplyr#dplyr](https://github.com/hadley/dplyr#dplyr). 
 
 ### readr
 
