@@ -13,9 +13,6 @@
 }
 \description{
 Complete triangle of losses for the same 4 private passenger auto and workers comp companies. Data is taken from the CAS.
-}
-\seealso{
-\code{\link{NAIC}}
 
 \itemize{
    \item GroupCode: NAIC company code
@@ -32,5 +29,8 @@ Complete triangle of losses for the same 4 private passenger auto and workers co
    \item Single: Either 1 or 0. 1 indicates a single entity, 0 indicates a group entity.
    \item Reserve1997: Posted reserves as of year-end 1997.
 }
+}
+\seealso{
+\code{\link{NAIC}}
 }
 

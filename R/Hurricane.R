@@ -4,9 +4,6 @@
 #' 
 #' @docType data
 #' 
-#' @usage
-#' 
-#' data(Hurricane)
 #' 
 #' @description
 #' 
@@ -31,5 +28,9 @@
 #'    \item Wind: windspeed measured knots (kt)
 #'    \item Pressure: atmospheric pressue measured in millibars (mb)
 #' }
+#' 
+#' @usage
+#' 
+#' data(Hurricane)
 #' 
 "Hurricane"

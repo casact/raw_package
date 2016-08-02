@@ -11,73 +11,159 @@ vignette: >
 
 # raw - R Actuarial Workshops
 
-This is a packge which stores data used in R workshops sponsored by the Casualty Actuarial Society. This short vignette will describe the various data sets and give examples of their use.
+This is a packge which stores data used in R workshops sponsored by the Casualty Actuarial Society[^CAS_CYA]. This short vignette will describe the various data sets and give examples of their use. As well, there is a short note about each of the packages which we suggest be installed.
 
-## Data
+[^CAS_CYA]:The CAS has neither produced nor endorsed the content of this package.
 
-Once the `raw` package has been installed, any of the data sets may be accessed. To get a list of the data sets available in any package in R, one may call the `data` function with the name of the package as an argument. To get help about any data set, one may use R's help facility to display the documentation for that data set. 
+# Data
 
-```{r}
+Once the `raw` package has been installed, any of the data sets may be accessed. To get a list of the data sets available in any package in R, one may call the `data` function with the name of the package as an argument. 
+
+```{r results='hide'}
 data(package = "raw")
 ```
 
+To get help about any data set, one may use R's help facility to display the documentation for that data set. 
 
-## COTOR
+```{r results='hide'}
+library(raw)
+?COTOR2
+```
 
-There are four sets in all. Note that the numbering begins at 2. So far as I am aware, the data for the first COTOR challenge is not available from the CAS website.
+### COTOR
 
-### COTOR 2
+There are four sets in all. Note that the numbering begins at 2. So far as I am aware, the data for the first COTOR challenge is not available from the CAS website. Each data set has a set of randomly generated non-life insurance claims.
 
-### COTOR 3
+### PPA
 
-### COTOR 4
+This is data taken from Appendix A of the [http://www.casact.org/library/studynotes/Werner_Modlin_Ratemaking.pdf]("Basic Ratemaking") study note by Werner and Modlin. This is a suite of data - six sets in all - pertaining to personal auto. More information may be found in the note itself.
 
-### COTOR 5
-
-## PPA
-
-This is data taken from Appendix A of the [http://www.casact.org/library/studynotes/Werner_Modlin_Ratemaking.pdf]("Basic Ratemaking") study note by Werner and Modlin. This is a suite of data - six sets in all - pertaining to personal auto as follows:
-
-* Rate change
-* 
-
-```{r}
+```{r results='hide'}
 data(PPA)
+head(PPA_LossDevelopment)
 ```
 
+### Huricane
 
-## Huricane
+This contains basic data
 
 ```{r}
+data("Hurricane")
 
+hist(Hurricane$Wind, xlab = "Wind Speed (knots)", main = "")
 ```
 
-## Region and State Experience
+### Region and State Experience
 
-## NFL
+This is a simulated data set.
 
-```{r}
+### NAIC
 
-```
+
 
 # Suggested Packages
 
-## dplyr 
+When installed using the command below, `raw` will also ensure that a useful suite of packages is installed. 
 
-## tidyr 
+```{r eval=FALSE}
+install.packages("raw", dependencies = "Suggests")
+```
 
-## ggplot2
 
-## lubridate
+## Actuarial packages
 
-## actuar
+### actuar
 
-## ChainLadder
+This contains a varied set of useful actuarial tools, from loss distributions to credibility to compound loss models. This also contains the data from the "Loss Models" textbook by Klugman, Panjer and Wilmot. Read more here: [actuar CRAN site](https://cran.r-project.org/web/packages/actuar/index.html).
 
-## knitr
+### ChainLadder
 
-## readr
+ChainLadder supports the standard suite of loss reserving methods. A quick overview may be found here: [https://github.com/mages/ChainLadder](https://github.com/mages/ChainLadder#chainladder).
 
-## readxl
+### mondate
 
-## rmarkdown
+The mondate package enables one to calculate time differences in terms of months. Trust me, you need this.
+
+```{r}
+library(mondate)
+endOfQuarter <- mondate("2010-03-31")
+mondate::add(endOfQuarter, 3, "months")
+```
+
+### FinCal
+
+Contains functions for present value, annuities, internal rate of return and more. Website here: [http://felixfan.github.io/FinCal/](http://felixfan.github.io/FinCal/)
+
+### rstan
+
+The `rstan` package is the R implementation of the Stan MCMC project. This is an incredibly powerful and easy to use Bayesian framework. No, really, it is. If you're into Bayesian computation, this is essential. If you're not a Bayesian, this package will make you one. There are piles of material on the Stan website [http://mc-stan.org/interfaces/rstan](http://mc-stan.org/interfaces/rstan). The tutorials are easy to follow and worth your time.
+
+### nlme
+
+This package supports hierarchical linear modelling. What's hierarchical linear modelling? It's basically a credibility method that's very popular in the social sciences and other non-actuarial fields. It should be popular everywhere. 
+
+## The Hadleyverse
+
+Hadley Wickham is an incredibly prolific and popular programmer who has made some big contributions to the R landscape.
+
+### dplyr
+
+I use the `dplyr` package on a daily basis. It has a simple, easy to understand grammar for data manipulation and summarization. Read the introduction here: [https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html). 
+
+### readr
+
+The `readr` package has a few nice improvements to the basic functions for reading in flat data files. Among other things, it makes it easier to specify column data types and will give useful warnings when it encounters problematic data cells. Read more here: [https://github.com/hadley/readr](https://github.com/hadley/readr#readr)
+
+### readxl
+
+There are a number of packages to read and write Excel files (`xlsx` and `XLConnect` are two). However, most use a java virtual machine to access the files and can run into memory issues. `readxl` doesn't.
+
+### tidyr 
+
+Tidyr is a light but useful set of functions to manipulate data. You'll most often see the `spread` and `gather` functions used to transform a data set between "long" and "wide" formats. There's a short intro here: [https://blog.rstudio.org/2014/07/22/introducing-tidyr/](https://blog.rstudio.org/2014/07/22/introducing-tidyr/).
+
+### ggplot2
+
+This is a very powerful, flexible graphing engine. Quite a few books have been written about it, which is testament to both its complexity and utility. 
+
+### lubridate
+
+Lubridate has a wealth of functions for manipulating dates and time intervals. 
+
+```{r results='hide'}
+library(lubridate)
+myDate <- mdy("2/16/1972")
+year(myDate) <- 2016
+```
+
+### scales
+
+Scales has some functions to render numbers in pretty formats.
+
+```{r}
+data("COTOR2")
+head(COTOR2)
+head(scales::dollar(COTOR2))
+```
+
+### devtools
+
+This package is likely not all that useful to beginners, but it does have one very useful function: `install_github`. This will allow you to intall the development version of packages from the [GitHub](https://github.com/) codesharing site. For example, the command below will ensure that you're always up to date with this package.
+
+```{r eval=FALSE}
+devtools::install_github("PirateGrunt/raw")
+```
+
+## Documentation
+
+### knitr
+
+The [knitr](http://yihui.name/knitr/) package, written by Yihue Xie, enables a user to combine R code and documentation in a single file. That file may then be converted into a format like PDF, HTML or Word. 
+
+### rmarkdown
+
+This package enhances `knitr` to make the document conversion described above a bit easier. This is an incredibly powerful framework. Read more here: [http://rmarkdown.rstudio.com/](http://rmarkdown.rstudio.com/).
+
+## maps and maptools
+
+As their names suggest, these packages support drawing maps.

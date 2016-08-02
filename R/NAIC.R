@@ -6,8 +6,6 @@
 #' 
 #' Complete triangle of losses for the same 4 private passenger auto and workers comp companies. Data is taken from the CAS.
 #' 
-#' @seealso \code{\link{NAIC}}
-#' 
 #' \itemize{
 #'    \item GroupCode: NAIC company code
 #'    \item Company 
@@ -28,6 +26,8 @@
 #' @source \url{http://www.casact.org/research/reserve_data/wkcomp_pos.csv}
 #' @source \url{http://www.casact.org/research/reserve_data/othliab_pos.csv}
 #' @docType data
+#' 
+#' @seealso \code{\link{NAIC}}
 #' 
 NULL
 

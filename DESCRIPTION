@@ -18,6 +18,7 @@ Suggests:
     tidyr,
     ggplot2,
     lubridate,
+    devtools,
     actuar,
     ChainLadder,
     knitr,
@@ -28,7 +29,8 @@ Suggests:
     FinCal,
     rstan,
     scales,
-    nlme
+    nlme,
+    maps
 VignetteBuilder: knitr
 Type: Package
 RoxygenNote: 5.0.1
