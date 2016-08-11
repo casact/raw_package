@@ -104,14 +104,26 @@ In our review of the development experience, we noted the follwing:
 ## Comparison of Methods
 
 ## R packages
+We used the following `R` packages to develop this analysis:  
 
-We used the following `R` packagaes to develop this analysis:  
+* Base R: `r citation()$textVersion`
 
-- `r citation()$textVersion` - 
-- `r citation('ChainLadder')$textVersion`
+We used `rmdformats` to produce this report. 
 
-```{r}
-lapply(my_packages, citation)
+* rmdformats: `r citation('rmdformats')$textVersion`
+
+We used the following packages to prepare the analysis.
+
+```{r, echo=FALSE, results='asis'}
+cite_text <- lapply(X = my_packages, FUN = function(pkg_name) {
+  cite <- citation(pkg_name)
+  unlist(cite$textVersion)
+}
+  ) %>% 
+  unlist()
+
+paste("*  ", cite_text, "\n") %>% 
+  cat()
 ```
 
 ## References
