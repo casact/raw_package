@@ -4,10 +4,14 @@
 \alias{InstallSuggestions}
 \title{InstallSuggestions}
 \usage{
-InstallSuggestions(...)
+InstallSuggestions(pkg = "raw", quiet, ...)
 }
 \arguments{
-\item{...}{Arguments to be passed to install.packages.}
+\item{pkg}{Name of the package for which you want to install suggestions}
+
+\item{quiet}{Include additional messages while installing?}
+
+\item{...}{Additional named arguments passed to `install.packages`}
 }
 \value{
 A character vector indicating which packages were installled.

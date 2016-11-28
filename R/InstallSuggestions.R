@@ -3,9 +3,11 @@
 #' 
 #' @description This function will install the full set of suggested packages.
 #' 
-#' @return A character vector indicating which packages were installled.
+#' @param pkg Name of the package for which you want to install suggestions
+#' @param quiet Include additional messages while installing?
+#' @param ... Additional named arguments passed to `install.packages`
 #' 
-#' @param ... Arguments to be passed to install.packages.
+#' @return A character vector indicating which packages were installled.
 #' 
 #' @importFrom utils install.packages
 #' 
@@ -17,13 +19,10 @@
 #'   InstallSuggestions()
 #' }
 #' 
-InstallSuggestions <- function (...){
-  strSuggestions <- c("dplyr", "tidyr", "ggplot2", "lubridate"
-                      , "devtools", "actuar", "ChainLadder"
-                      , "knitr", "readr", "readxl", "rmarkdown"
-                      , "mondate", "FinCal", "rstan", "scales"
-                      , "nlme", "maps")
+InstallSuggestions <- function (pkg = "raw", quiet, ...){
   
+  strSuggestions <- PackageDependencies(pkg, "Suggests")
+
   message("Installing suggested packages. This may take a while.")
   
   alreadyInstalled <- PackageIsInstalled(strSuggestions)
@@ -39,31 +38,43 @@ InstallSuggestions <- function (...){
     message(strMessage)
   }
   
+  # We're going to default to quiet unless the user has told us otherwise
+  if (missing(quiet)) {
+    quiet = TRUE
+  }
+  
   if (length(pkgNeedsUpdate) != 0){
     strMessage <- paste0("The following packages are already installed but need to be updated: \n"
                          , paste(pkgNeedsUpdate, collapse = ", \n"))
     message(strMessage)
     message("Updating ... ")
   
-    utils::install.packages(pkgNeedsInstallation, ...)
+    utils::install.packages(pkgNeedsUpdate, quiet = quiet, ...)
   }
   
   if (length(pkgNeedsInstallation) != 0) {
-    strMessage <- paste0("The following packages have not been installed: \n"
+    strMessage <- paste0("The following packages will be installed now: \n"
                          , paste(pkgNeedsInstallation, collapse = ", \n"))
     message(strMessage)
     
-    message("Updating ... ")
+    message("Installing ... ")
     
-    utils::install.packages(pkgNeedsInstallation, ...)
+    utils::install.packages(pkgNeedsInstallation, quiet = quiet, ...)
   } 
   
   pkgUpToDate <- strSuggestions[PackageIsInstalled(strSuggestions) & !PackageNeedsUpdating(strSuggestions)]
 
-  strMessage <- paste0("The following packages are now installed and up to date: \n"
-                       , paste(pkgUpToDate, collapse = ", \n"))
-  message(strMessage)  
-
+  if (length(pkgUpToDate) == length(strSuggestions)) {
+    strMessage <- "All packages are installed and up to date."
+    message(strMessage)  
+  } else {
+    bumPackages <- setdiff(strSuggestions, pkgUpToDate)
+    strMessage <- paste0("Not all packages are installed and up to date. "
+                         , "You should try to reinstall the following packages: "
+                         , paste(bumPackages, collapse = ", \n"))
+    warning(strMessage)
+  }
+  
 }
 
 #' PackageIsInstalled
@@ -87,7 +98,8 @@ InstallSuggestions <- function (...){
 #' @export
 #' 
 PackageIsInstalled <- function(pkgs){
-  installed <- pkgs %in% intersect(pkgs, utils::installed.packages()[, 1])
+  installed <- utils::installed.packages(fields = "Package")[, "Package"]
+  installed <- pkgs %in% intersect(pkgs, installed)
   installed
 }
 
@@ -114,4 +126,40 @@ PackageIsInstalled <- function(pkgs){
 PackageNeedsUpdating <- function(pkgs){
   needsUpdate <- pkgs %in% intersect(pkgs, utils::old.packages()[, 1])
   needsUpdate
+}
+
+#' PackageDependencies
+#' 
+#' @name PackageDependencies
+#' 
+#' @description PackageDependencies will examine the DESCRIPTION file of a package and return a vector of 
+#'              dependencies.
+#' 
+#' @param x The name of the packages
+#' @param type What sort of dependency are you looking for? Permissible values are "Depends", "Imports", 
+#'            "Suggests", "Enhances" and "LinkingTo"
+#'            
+#' @importFrom utils packageDescription
+#' 
+#' @examples 
+#' 
+#' \dontrun{
+#'   PackageDependencies("ggplot2", "Depends")
+#' }
+#'
+#' @export
+#' 
+PackageDependencies <- function(x, type = c("Depends", "Imports", "Suggests", "Enhances", "LinkingTo"))
+{
+  if (length(x) > 1){
+    warning("x has length > 1. Only the first element will be used.")
+    x <- x[1]
+  }
+  
+  deps <- packageDescription(x, fields =  type)
+  deps <- gsub("\n", "", deps)
+  deps <- gsub(" ", "", deps)
+  deps <- strsplit(deps, ",")[[1]]
+  
+  deps
 }

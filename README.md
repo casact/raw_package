@@ -4,7 +4,7 @@ Status](https://travis-ci.org/PirateGrunt/raw_package.svg?branch=master)](https:
 [![Downloads from the RStudio CRAN
 mirror](http://cranlogs.r-pkg.org/badges/grand-total/raw)](https://cran.r-project.org/package=raw)
 [![packageversion](https://img.shields.io/badge/Package%20version-0.1.1-orange.svg?style=flat-square)](commits/master)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2016--11--09-yellowgreen.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/last%20change-2016--11--28-yellowgreen.svg)](/commits/master)
 
 [![Licence](https://img.shields.io/badge/licence-CC0-blue.svg)](http://choosealicense.com/licenses/cc0-1.0/)
 

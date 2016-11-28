@@ -5,5 +5,7 @@ all:
 	Rscript -e "devtools::build(vignettes = TRUE)"
 	Rscript -e "devtools::check(args = c('--as-cran'))"
 	Rscript -e "rmarkdown::render('README.Rmd')"
+	Rscript -e "devtools::install()"
 	Rscript -e "staticdocs::build_site()"
-	cp -rTu ./inst/web/ ~/Projects/Websites/raw_package/
+	cp -rTu ./inst/web/ ~/projects/websites/raw_package/
+	

@@ -2,8 +2,10 @@
 
 export(CasColNames)
 export(InstallSuggestions)
+export(PackageDependencies)
 export(PackageIsInstalled)
 export(PackageNeedsUpdating)
 importFrom(utils,install.packages)
 importFrom(utils,installed.packages)
 importFrom(utils,old.packages)
+importFrom(utils,packageDescription)

@@ -4,7 +4,7 @@ Description: In order to facilitate R instruction for actuaries, we have organiz
   sets of publicly available data of interest to non-life actuaries. In addition, we suggest 
   a set of packages, which most practicing actuaries will use routinely. Finally, there is 
   an R markdown skeleton for basic reserve analysis.
-Version: 0.1.3
+Version: 0.1.4
 Maintainer: Brian A. Fannin <FanninQED@yahoo.com>
 Authors@R: person("Brian A.", "Fannin"
     , role = c("aut", "cre")
@@ -30,7 +30,13 @@ Suggests:
     rstan,
     scales,
     nlme,
-    maps
+    maps, 
+    fitdistrplus,
+    tweedie,
+    nycflights13,
+    XML,
+    RColorBrewer, 
+    Lahman
 VignetteBuilder: knitr
 Type: Package
 RoxygenNote: 5.0.1
