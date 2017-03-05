@@ -17,7 +17,5 @@ actuaries. In addition, we suggest a set of packages, which most
 practicing actuaries will use routinely. Finally, there is an R markdown
 skeleton for basic reserve analysis.
 
-    devtools::install_github("raw")
-    library(raw)
-    data(Hurricane)
-    head(Hurricane)
+    install.packages("raw")
+    InstallSuggestions()
