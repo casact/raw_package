@@ -27,7 +27,6 @@ Suggests:
     rmarkdown,
     mondate,
     FinCal,
-    rstan,
     scales,
     nlme,
     maps, 
