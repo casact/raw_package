@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>Hurricane. raw 0.1.4</title>
+<title>InstallSuggestions. raw 0.1.4</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 
@@ -47,62 +47,53 @@
         
       </header>
       
-      <h1>Hurricane data</h1>
+      <h1>InstallSuggestions</h1>
 
 <div class="row">
   <div class="span8">
     <h2>Usage</h2>
-    <pre><div>data(Hurricane)</div></pre>
-        
-    <div class="Format">
-      <h2>Format</h2>
+    <pre><div>InstallSuggestions(pkg&nbsp;=&nbsp;"raw", quiet, ...)</div></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>pkg</dt>
+      <dd>Name of the package for which you want to install suggestions</dd>
+      <dt>quiet</dt>
+      <dd>Include additional messages while installing?</dd>
+      <dt>...</dt>
+      <dd>Additional named arguments passed to `install.packages`</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
 
-      <p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 17494 rows and 8 columns.</p>
+      <p><dl>
+A character vector indicating which packages were installled.
+</dl></p>
   
     </div>
 
     <div class="Description">
       <h2>Description</h2>
 
-      <p>Listing of the position and windspeed of hurricanes from 1970 through 2011.</p>
-  
-      <p>Data is taken from the <a href = 'http://www.noaa.gov/'>National Hurricane Center</a>, a division of the National Oceanic and Atmospheric Association. The data may be
-obtained here: <a href = 'ftp://eclipse.ncdc.noaa.gov/pub/ibtracs/v03r04/wmo/csv/basin/Basin.NA.ibtracs_wmo.v03r04.csv'>NOAA ftp</a>. A 
-description of the data as well as data for storms in other regions may be found 
-here: <a href = 'https://www.ncdc.noaa.gov/ibtracs/index.php?name=wmo-data'>IBTrACS</a>.</p>
-  
-      <p>The fields "SerialNumber", "Basin", "SubBasin", "Nature", "Pressure", "Center", "WindPercentile", "PressurePercentile" and "TrackType"
-have been removed.</p>
-  
-      <p><ul>
-<li> Year: Integer from 1971 through 2011 
-   </li>
-<li> Number: Integer used to designate the hurricanes in a particular year
-   </li>
-<li> Name: The name of the hurricane
-   </li>
-<li> ISO_Time: The time the observation was made
-   </li>
-<li> Latitude: Latitude where the observation was made
-   </li>
-<li> Longitutde: Longitude where the observation was made
-   </li>
-<li> Wind: windspeed measured knots (kt)
-   </li>
-<li> Pressure: atmospheric pressue measured in millibars (mb)
-</li>
-</ul></p>
-  
-      <p></p>
+      <p>This function will install the full set of suggested packages.</p>
   
     </div>
-      </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'>
+## Not run: 
+#   InstallSuggestions()
+# ## End(Not run)
+
+</div></pre>
+  </div>
   <div class="span4">
     <!-- <ul>
-      <li>Hurricane</li>
+      <li>InstallSuggestions</li>
     </ul>
     <ul>
-      <li>datasets</li>
+      
     </ul> -->
       
         
