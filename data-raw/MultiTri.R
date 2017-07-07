@@ -1,9 +1,4 @@
 library(dplyr)
-source("./data-raw/CAS_reserves.R")
-
-lstSets <- lapply(datasets, FetchDataSet)
-names(lstSets) <- datasets
-mapply(lstSets, names(lstSets), FUN = SaveDataSet)
 
 load("./data/ppauto.rda")
 dfPPA <- ppauto
@@ -16,19 +11,33 @@ dfGL <- othliab
 
 rm(ppauto, wkcomp, othliab)
 
-colnames(dfPPA) = NewColnames
-colnames(dfWC) = NewColnames
-colnames(dfGL) = NewColnames
+# colnames(dfPPA) = NewColnames
+# colnames(dfWC) = NewColnames
+# colnames(dfGL) = NewColnames
+
+TopCompanies <- function(df, numCompany){
+  df <- df %>% 
+    group_by(Company) %>% 
+    summarise(NetEP = sum(NetEP, na.rm = TRUE)) %>% 
+    arrange(desc(NetEP)) %>% 
+    slice(1:numCompany) %>%
+    select(Company) %>%
+    unlist()
+  
+  names(df) <- NULL
+  
+  df
+}
 
 # Fetch the top 10 insurers
 TopPPA <- dfPPA %>% 
-  TopTen()
+  TopCompanies(10)
 
 TopWC <- dfWC %>% 
-  TopTen()
+  TopCompanies(10)
 
 TopGL <- dfGL %>%
-  TopTen()
+  TopCompanies(10)
 
 companies = intersect(TopWC, intersect(TopPPA, TopGL))
 
@@ -39,20 +48,6 @@ rm(TopPPA, TopWC)
 dfPPA$Line = "Personal Auto"
 dfWC$Line = "Workers Comp"
 dfGL$Line <- "Other Liability"
-
-TopCompanies <- function(df, numCompany){
-  df <- df %>% 
-    group_by(Company) %>% 
-    summarise(NetEP = sum(NetEP, na.rm = TRUE)) %>% 
-    arrange(desc(NetEP)) %>% 
-    slice(1:numCompany) %>%
-    select(Company) %>%
-    unlist()
-
-  names(df) <- NULL
-  
-  df
-}
 
 wc_companies <- unique(dfWC$Company)
 ppa_companies <- unique(dfPPA$Company)

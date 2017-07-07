@@ -26,4 +26,3 @@ This function will install the full set of suggested packages.
 }
 
 }
-

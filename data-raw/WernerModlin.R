@@ -25,4 +25,4 @@ save(PPA_RateChange
      , PPA_PremiumTrend
      , PPA_LossDevelopment
      , PPA_ULAE
-     , file = "./data/PPA.rdata", compress = "xz")
+     , file = "./data/PPA.rda", compress = "xz")

@@ -18,4 +18,3 @@ vignette(topic = "raw")
 }
 
 }
-

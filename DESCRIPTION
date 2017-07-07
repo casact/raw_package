@@ -39,5 +39,5 @@ Suggests:
     Lahman
 VignetteBuilder: knitr
 Type: Package
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
 URL: http://pirategrunt.com/raw_package/

@@ -8,3 +8,4 @@ cran-comments.md
 inst/staticdocs
 inst/web
 news.md
+^docs$

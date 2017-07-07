@@ -2,9 +2,9 @@
 % Please edit documentation in R/COTOR.R
 \docType{data}
 \name{COTOR2}
+\alias{COTOR2}
 \alias{COTOR}
 \alias{COTOR1}
-\alias{COTOR2}
 \alias{COTOR3}
 \alias{COTOR4}
 \alias{COTOR5}
@@ -60,4 +60,3 @@ COTOR5 is a data frame with 4849 rows and 5 columns
 
 \href{http://www.casact.org/research/cotor/index.cfm?fa=round5}{COTOR round 5}
 }
-

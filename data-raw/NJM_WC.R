@@ -1,9 +1,11 @@
 library(dplyr)
-source("./data-raw/CAS_reserves.R")
 
-NJM_WC <- FetchDataSet("wkcomp")
+load("./data/wkcomp.rda")
+assign("NJM_WC", wkcomp)
 
-names(NJM_WC) <- NewColnames
+# NJM_WC <- FetchDataSet("wkcomp")
+
+# names(NJM_WC) <- NewColnames
 
 NJM_WC <- NJM_WC %>% 
   filter(GroupCode == 7080)

@@ -40,7 +40,7 @@ InstallSuggestions <- function (pkg = "raw", quiet, ...){
   
   # We're going to default to quiet unless the user has told us otherwise
   if (missing(quiet)) {
-    quiet = TRUE
+    quiet = FALSE
   }
   
   if (length(pkgNeedsUpdate) != 0){

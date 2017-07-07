@@ -88,4 +88,3 @@ A data frame with 3 observations of 4 values.
    \item ULAE_Ratio: The ratio of ULAE to the paid loss and ALAE.
 }
 }
-

@@ -3,12 +3,12 @@
 \docType{data}
 \name{NAIC}
 \alias{NAIC}
+\alias{ppauto}
+\alias{wkcomp}
 \alias{comauto}
 \alias{medmal}
 \alias{othliab}
-\alias{ppauto}
 \alias{prodliab}
-\alias{wkcomp}
 \title{NAIC}
 \source{
 \url{http://www.casact.org/research/reserve_data/ppauto_pos.csv}
@@ -24,7 +24,7 @@
 \url{http://www.casact.org/research/reserve_data/othliab_pos.csv}
 }
 \description{
-This data represents ten complete years of Schedule P development many NAIC reporting companies. The data was
+This data represents ten complete years of Schedule P development for many NAIC reporting companies. The data was
 prepared by Glenn Meyers and Peng Shi and is available from the CAS \href{http://www.casact.org/research/index.cfm?fa=loss_reserves_data}{http://www.casact.org/research/index.cfm?fa=loss_reserves_data}.
 
 NOte that the columns have been given more user friendly names. The original column names may be restored by using the CasColNames function.
@@ -45,4 +45,3 @@ NOte that the columns have been given more user friendly names. The original col
    \item Reserve1997: Posted reserves as of year-end 1997.
 }
 }
-

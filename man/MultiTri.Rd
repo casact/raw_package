@@ -33,4 +33,3 @@ Complete triangle of losses for the same 4 private passenger auto and workers co
 \seealso{
 \code{\link{NAIC}}
 }
-

@@ -22,4 +22,3 @@ Consolidation of state data into various regions. The state data was generated r
 \code{\link{StateExperience}}
 }
 \keyword{datasets}
-

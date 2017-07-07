@@ -36,7 +36,7 @@ NULL
 #' @name NAIC
 #' @description 
 #' 
-#' This data represents ten complete years of Schedule P development many NAIC reporting companies. The data was
+#' This data represents ten complete years of Schedule P development for many NAIC reporting companies. The data was
 #' prepared by Glenn Meyers and Peng Shi and is available from the CAS \href{http://www.casact.org/research/index.cfm?fa=loss_reserves_data}{http://www.casact.org/research/index.cfm?fa=loss_reserves_data}.
 #' 
 #' NOte that the columns have been given more user friendly names. The original column names may be restored by using the CasColNames function.

@@ -26,3 +26,13 @@ NewColnames <- c("GroupCode"
                 , "NetEP"
                 , "Single"
                 , "Reserve1997")
+
+library(dplyr)
+
+lstSets <- lapply(datasets, FetchDataSet)
+lstSets <- lapply(lstSets, function(x){
+  names(x) <- NewColnames
+  x
+})
+names(lstSets) <- datasets
+mapply(lstSets, names(lstSets), FUN = SaveDataSet)

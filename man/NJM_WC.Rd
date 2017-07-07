@@ -35,4 +35,3 @@ This is a data frame with 100 observations of 13 variables.
 }
 }
 \keyword{datasets}
-

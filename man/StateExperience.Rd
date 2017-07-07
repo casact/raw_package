@@ -24,4 +24,3 @@ Random illustrative data
 \code{\link{RegionExperience}}
 }
 \keyword{datasets}
-
