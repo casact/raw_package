@@ -96,6 +96,12 @@ Contains functions for present value, annuities, internal rate of return and mor
 
 ### rstan
 
+At the time of writing, this package has been removed from the list of suggested packages that ships with `raw`. This is due to a potential installation issue that could have affected its acceptance when submitting to CRAN. Despite that, I can _strongly_ suggest that actuaries install this package on their own. To do so, simply type the command below.
+
+```{r eval=FALSE}
+install.packages("rstan")
+```
+
 The `rstan` package is the R implementation of the Stan MCMC project. This is an incredibly powerful and easy to use Bayesian framework. No, really, it is. If you're into Bayesian computation, this is essential. If you're not a Bayesian, this package will make you one. There are piles of material on the Stan website [http://mc-stan.org/interfaces/rstan](http://mc-stan.org/interfaces/rstan). The tutorials are easy to follow and worth your time.
 
 ### nlme
