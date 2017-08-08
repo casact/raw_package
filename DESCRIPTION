@@ -5,10 +5,10 @@ Description: In order to facilitate R instruction for actuaries, we have organiz
   a set of packages, which most practicing actuaries will use routinely. Finally, there is 
   an R markdown skeleton for basic reserve analysis.
 Version: 0.1.5
-Maintainer: Brian A. Fannin <FanninQED@yahoo.com>
+Maintainer: Brian A. Fannin <captain@PirateGrunt.com>
 Authors@R: person("Brian A.", "Fannin"
     , role = c("aut", "cre")
-    , email = "FanninQED@yahoo.com")
+    , email = "captain@PirateGrunt.com")
 LazyData: true
 License: CC0
 Depends:
