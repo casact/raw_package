@@ -16,7 +16,6 @@ Depends:
 Suggests:
     actuar,
     ChainLadder,
-    copula,
     devtools,
     FinCal,
     fitdistrplus,
