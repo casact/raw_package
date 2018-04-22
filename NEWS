@@ -1,8 +1,15 @@
-raw 0.1.5 (Unreleased)
+raw 0.1.6 (Release date:2018-04-)
+===============================
+* Add copula and insuranceData to the list of suggested packages
+* Fix newline warning on Windows
+* Consolidate tidyverse packages in Suggests
+
+raw 0.1.5 (Release date: 2017-08-08)
 ===============================
 * Changed URL in DESCRIPTION file
 * Changed default for 'quiet' parameter in the InstallSuggestions function to TRUE
 * Fix column names for CAS data
+* The maintainer e-mail address has been changed
 
 raw 0.1.4 (Release date: 2016-11-28)
 ===============================
