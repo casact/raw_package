@@ -36,7 +36,7 @@ There are four sets in all. Note that the numbering begins at 2. So far as I am 
 
 ### PPA
 
-This is data taken from Appendix A of the [http://www.casact.org/library/studynotes/Werner_Modlin_Ratemaking.pdf]("Basic Ratemaking") study note by Werner and Modlin. This is a suite of data - six sets in all - pertaining to personal auto. More information may be found in the note itself.
+This is data taken from Appendix A of the [Basic Ratemaking study note](http://www.casact.org/library/studynotes/Werner_Modlin_Ratemaking.pdf) by Werner and Modlin. This is a suite of data - six sets in all - pertaining to personal auto. More information may be found in the note itself.
 
 ```{r results='hide'}
 data(PPA)
@@ -55,11 +55,11 @@ hist(Hurricane$Wind, xlab = "Wind Speed (knots)", main = "")
 
 ### Region and State Experience
 
-This is a simulated data set.
+This are simulated data sets.
 
 ### NAIC
 
-
+This data represents ten complete years of Schedule P development from many NAIC reporting companies. The data was prepared by Glenn Meyers and Peng Shi and is available from the [CAS](http://www.casact.org/research/index.cfm?fa=loss_reserves_data).
 
 # Suggested Packages
 
@@ -68,7 +68,6 @@ When installed using the command below, `raw` will also ensure that a useful sui
 ```{r eval=FALSE}
 install.packages("raw", dependencies = "Suggests")
 ```
-
 
 ## Actuarial packages
 
@@ -108,9 +107,13 @@ The `rstan` package is the R implementation of the Stan MCMC project. This is an
 
 This package supports hierarchical linear modelling. What's hierarchical linear modelling? It's basically a credibility method that's very popular in the social sciences and other non-actuarial fields. It should be popular everywhere. 
 
-## The Hadleyverse
+## The tidyverse
 
-Hadley Wickham is an incredibly prolific and popular programmer who has made some big contributions to the R landscape.
+```{r}
+library(tidyverse)
+```
+
+[Hadley Wickham](http://hadley.nz/) is an incredibly prolific and popular programmer who has made some big contributions to the R landscape.
 
 ### dplyr
 
@@ -126,7 +129,7 @@ There are a number of packages to read and write Excel files (`xlsx` and `XLConn
 
 ### tidyr 
 
-Tidyr is a light but useful set of functions to manipulate data. You'll most often see the `spread` and `gather` functions used to transform a data set between "long" and "wide" formats. There's a short intro here: [https://blog.rstudio.org/2014/07/22/introducing-tidyr/](https://blog.rstudio.org/2014/07/22/introducing-tidyr/).
+tidyr is a light but useful set of functions to manipulate data. You'll most often see the `spread` and `gather` functions used to transform a data set between "long" and "wide" formats. There's a short intro here: [https://blog.rstudio.org/2014/07/22/introducing-tidyr/](https://blog.rstudio.org/2014/07/22/introducing-tidyr/).
 
 ### ggplot2
 
@@ -147,9 +150,10 @@ year(myDate) <- 2016
 Scales has some functions to render numbers in pretty formats.
 
 ```{r}
+library(scales)
 data("COTOR2")
 head(COTOR2)
-head(scales::dollar(COTOR2))
+head(dollar(COTOR2))
 ```
 
 ### devtools
