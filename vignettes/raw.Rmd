@@ -9,6 +9,10 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+
 # raw - R Actuarial Workshops
 
 This is a packge which stores data used in R workshops sponsored by the Casualty Actuarial Society[^CAS_CYA]. This short vignette will describe the various data sets and give examples of their use. As well, there is a short note about each of the packages which we suggest be installed.
