@@ -30,7 +30,16 @@ Suggests:
     RColorBrewer, 
     rmarkdown,
     scales,
-    tidyverse,
+    dplyr,
+    ggplot2,
+    tibble,
+    readr,
+    tidyr,
+    purrr,
+    lubridate,
+    stringr,
+    forcats,
+    readxl,
     tweedie,
     XML
 VignetteBuilder: knitr
