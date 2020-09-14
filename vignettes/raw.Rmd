@@ -23,13 +23,13 @@ This is a packge which stores data used in R workshops sponsored by the Casualty
 
 Once the `raw` package has been installed, any of the data sets may be accessed. To get a list of the data sets available in any package in R, one may call the `data` function with the name of the package as an argument. 
 
-```{r results='hide'}
+```{r eval = FALSE}
 data(package = "raw")
 ```
 
 To get help about any data set, one may use R's help facility to display the documentation for that data set. 
 
-```{r results='hide'}
+```{r eval = FALSE}
 library(raw)
 ?COTOR2
 ```
@@ -113,7 +113,7 @@ This package supports hierarchical linear modelling. What's hierarchical linear 
 
 ## The tidyverse
 
-```{r}
+```{r eval=FALSE}
 library(tidyverse)
 ```
 
