@@ -25,7 +25,7 @@
 #' 
 InstallSuggestions <- function (pkg = "raw", quiet, ...){
   
-  strSuggestions <- PackageDependencies(pkg, "Suggests")
+  strSuggestions <- c('tidyverse', PackageDependencies(pkg, "Suggests"))
 
   message("Installing suggested packages. This may take a while.")
   
