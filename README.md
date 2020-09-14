@@ -1,12 +1,6 @@
-[![Travis-CI Build
-Status](https://travis-ci.org/PirateGrunt/raw_package.svg?branch=master)](https://travis-ci.org/PirateGrunt/raw_package)
+[![Travis-CI Build Status](https://travis-ci.org/PirateGrunt/raw_package.svg?branch=master)](https://travis-ci.org/casact/raw_package)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/raw)](https://cran.r-project.org/package=raw)
-[![Downloads from the RStudio CRAN
-mirror](http://cranlogs.r-pkg.org/badges/grand-total/raw)](https://cran.r-project.org/package=raw)
-[![packageversion](https://img.shields.io/badge/Package%20version-0.1.1-orange.svg?style=flat-square)](commits/master)
-[![Last-changedate](https://img.shields.io/badge/last%20change-2017--07--07-yellowgreen.svg)](/commits/master)
-
-[![Licence](https://img.shields.io/badge/licence-CC0-blue.svg)](http://choosealicense.com/licenses/cc0-1.0/)
+[![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/grand-total/raw)](https://cran.r-project.org/package=raw)
 
 raw
 ===
