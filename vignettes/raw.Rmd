@@ -1,5 +1,5 @@
 ---
-title: "raw - R Actuarial Workshops"
+title: "raw"
 author: "Brian A. Fannin, ACAS"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette

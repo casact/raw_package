@@ -46,4 +46,5 @@ Suggests:
 VignetteBuilder: knitr
 Type: Package
 RoxygenNote: 7.1.0
-URL: http://pirategrunt.com/raw_package/
+URL: https://pirategrunt.com/raw_package/
+Encoding: UTF-8
