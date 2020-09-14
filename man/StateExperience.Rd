@@ -4,7 +4,9 @@
 \name{StateExperience}
 \alias{StateExperience}
 \title{State data}
-\format{An object of class \code{data.frame} with 500 rows and 6 columns.}
+\format{
+An object of class \code{data.frame} with 500 rows and 6 columns.
+}
 \usage{
 data(StateExperience)
 }

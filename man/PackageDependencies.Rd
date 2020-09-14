@@ -4,8 +4,10 @@
 \alias{PackageDependencies}
 \title{PackageDependencies}
 \usage{
-PackageDependencies(x, type = c("Depends", "Imports", "Suggests", "Enhances",
-  "LinkingTo"))
+PackageDependencies(
+  x,
+  type = c("Depends", "Imports", "Suggests", "Enhances", "LinkingTo")
+)
 }
 \arguments{
 \item{x}{The name of the packages}

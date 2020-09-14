@@ -45,5 +45,5 @@ Suggests:
     XML
 VignetteBuilder: knitr
 Type: Package
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.0
 URL: http://pirategrunt.com/raw_package/

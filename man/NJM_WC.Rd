@@ -4,7 +4,9 @@
 \name{NJM_WC}
 \alias{NJM_WC}
 \title{New Jersey Manufacturing Company Workers Comp Reserving Data}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 100 rows and 13 columns.}
+\format{
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 100 rows and 13 columns.
+}
 \usage{
 data(NJM_WC)
 }

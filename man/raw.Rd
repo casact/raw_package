@@ -3,7 +3,6 @@
 \docType{package}
 \name{raw}
 \alias{raw}
-\alias{raw-package}
 \title{raw - R Actuarial Workshops}
 \description{
 This is a packge which stores data used in R workshops sponsored by the Casualty Actuarial Society.
