@@ -19,6 +19,10 @@ This is a packge which stores data used in R workshops sponsored by the Casualty
 
 [^CAS_CYA]:The CAS has neither produced nor endorsed the content of this package.
 
+```{r}
+library(raw)
+```
+
 # Data
 
 Once the `raw` package has been installed, any of the data sets may be accessed. To get a list of the data sets available in any package in R, one may call the `data` function with the name of the package as an argument. 
@@ -30,7 +34,6 @@ data(package = "raw")
 To get help about any data set, one may use R's help facility to display the documentation for that data set. 
 
 ```{r eval = FALSE}
-library(raw)
 ?COTOR2
 ```
 
