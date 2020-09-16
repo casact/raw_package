@@ -13,7 +13,7 @@
 data(COTOR2)
 }
 \description{
-The \href{http://www.casact.org/research/cotor/}{Casualty Actuarial Society's Committee on Theory of Risk (COTOR)} 
+The \href{https://www.casact.org/research/cotor/}{Casualty Actuarial Society's Committee on Theory of Risk (COTOR)} 
 issued several challenges as part of their work. These involved artificial constructed loss data. Actuaries
 were invited to construct models to estimate appropriate premiums for risk transfer.
 
@@ -23,7 +23,7 @@ Note that there is no COTOR1.
 
 COTOR2 is a vector containing 250 observations of claim values.
 
-\href{http://www.casact.org/research/cotor/index.cfm?fa=round2}{COTOR round 2}
+\href{https://www.casact.org/research/cotor/index.cfm?fa=round2}{COTOR round 2}
 
 \strong{COTOR3}
 
@@ -34,7 +34,7 @@ COTOR3 is a data frame with 490 observations of 2 variables. The values were gen
    \item Amount: the amount of the claim.
 }
 
-\href{http://www.casact.org/research/cotor/index.cfm?fa=round3}{COTOR round 3}
+\href{https://www.casact.org/research/cotor/index.cfm?fa=round3}{COTOR round 3}
 
 \strong{COTOR4}
 
@@ -45,7 +45,7 @@ COTOR4 is a data frame with 2500 rows and 2 columns.
    \item Amount: the amount of the claim.
 }
 
-\href{http://www.casact.org/research/cotor/index.cfm?fa=round4}{COTOR round 4}
+\href{https://www.casact.org/research/cotor/index.cfm?fa=round4}{COTOR round 4}
 
 \strong{COTOR5}
 
@@ -58,5 +58,5 @@ COTOR5 is a data frame with 4849 rows and 5 columns
    \item Amount: the amount of the claim.
 }
 
-\href{http://www.casact.org/research/cotor/index.cfm?fa=round5}{COTOR round 5}
+\href{https://www.casact.org/research/cotor/index.cfm?fa=round5}{COTOR round 5}
 }

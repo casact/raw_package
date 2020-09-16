@@ -5,11 +5,11 @@
 \alias{MultiTri}
 \title{MultiTri}
 \source{
-\url{http://www.casact.org/research/reserve_data/ppauto_pos.csv}
+\url{https://www.casact.org/research/reserve_data/ppauto_pos.csv}
 
-\url{http://www.casact.org/research/reserve_data/wkcomp_pos.csv}
+\url{https://www.casact.org/research/reserve_data/wkcomp_pos.csv}
 
-\url{http://www.casact.org/research/reserve_data/othliab_pos.csv}
+\url{https://www.casact.org/research/reserve_data/othliab_pos.csv}
 }
 \description{
 Complete triangle of losses for the same 4 private passenger auto and workers comp companies. Data is taken from the CAS.
