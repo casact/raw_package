@@ -13,7 +13,7 @@
 #' 
 #' @description 
 #' 
-#' This is data taken from Appendix A of the \href{http://www.casact.org/library/studynotes/Werner_Modlin_Ratemaking.pdf}{"Basic Ratemaking"} study 
+#' This is data taken from Appendix A of the \href{https://www.casact.org/library/studynotes/Werner_Modlin_Ratemaking.pdf}{"Basic Ratemaking"} study 
 #' note by Werner and Modlin.
 #' 
 #' \strong{Rate change}

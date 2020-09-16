@@ -14,11 +14,11 @@
 #' @description 
 #' 
 #' This data represents ten complete years of Schedule P workers comp development for the New Jersey Manufacturing Company. The data was
-#' prepared by Glenn Meyers and Peng Shi and is available from the CAS \href{http://www.casact.org/research/index.cfm?fa=loss_reserves_data}{http://www.casact.org/research/index.cfm?fa=loss_reserves_data}.
+#' prepared by Glenn Meyers and Peng Shi and is available from the CAS \href{https://www.casact.org/research/index.cfm?fa=loss_reserves_data}{https://www.casact.org/research/index.cfm?fa=loss_reserves_data}.
 #' The columns have been given more user friendly names. The original column names may be restored by using the CasColNames function.
 #' 
 #' This data has been included because it is the triangle used by Greg Taylor and Grainne McGuire in their monograph "Stochastic Loss
-#' Reserving Using Generalized Linear Models". \href{http://www.casact.org/pubs/monographs/index.cfm?fa=taylor-monograph03}{http://www.casact.org/pubs/monographs/index.cfm?fa=taylor-monograph03}
+#' Reserving Using Generalized Linear Models". \href{https://www.casact.org/pubs/monographs/index.cfm?fa=taylor-monograph03}{https://www.casact.org/pubs/monographs/index.cfm?fa=taylor-monograph03}
 #' 
 #' This is a data frame with 100 observations of 13 variables.
 #' 
