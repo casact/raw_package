@@ -10,7 +10,7 @@ Authors@R: person("Brian A.", "Fannin"
     , role = c("aut", "cre")
     , email = "captain@PirateGrunt.com")
 LazyData: true
-License: file LICENSE
+License: MPL-2.0 | file LICENSE
 Depends:
     R (>= 3.0)
 Suggests:
