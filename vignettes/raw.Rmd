@@ -108,7 +108,7 @@ At the time of writing, this package has been removed from the list of suggested
 install.packages("rstan")
 ```
 
-The `rstan` package is the R implementation of the Stan MCMC project. This is an incredibly powerful and easy to use Bayesian framework. No, really, it is. If you're into Bayesian computation, this is essential. If you're not a Bayesian, this package will make you one. There are piles of material on the Stan website [http://mc-stan.org/interfaces/rstan](http://mc-stan.org/interfaces/rstan). The tutorials are easy to follow and worth your time.
+The `rstan` package is the R implementation of the Stan MCMC project. This is an incredibly powerful and easy to use Bayesian framework. No, really, it is. If you're into Bayesian computation, this is essential. If you're not a Bayesian, this package will make you one. There are piles of material on the Stan website [https://mc-stan.org/users/interfaces/rstan](https://mc-stan.org/users/interfaces/rstan.html). The tutorials are easy to follow and worth your time.
 
 ### nlme
 
@@ -124,11 +124,11 @@ library(tidyverse)
 
 ### dplyr
 
-I use the `dplyr` package on a daily basis. It has a simple, easy to understand grammar for data manipulation and summarization. Read the introduction here: [https://github.com/hadley/dplyr#dplyr](https://github.com/hadley/dplyr#dplyr). 
+I use the `dplyr` package on a daily basis. It has a simple, easy to understand grammar for data manipulation and summarization. Read the introduction here: [https://github.com/tidyverse/dplyr](https://github.com/tidyverse/dplyr). 
 
 ### readr
 
-The `readr` package has a few nice improvements to the basic functions for reading in flat data files. Among other things, it makes it easier to specify column data types and will give useful warnings when it encounters problematic data cells. Read more here: [https://github.com/hadley/readr](https://github.com/hadley/readr#readr)
+The `readr` package has a few nice improvements to the basic functions for reading in flat data files. Among other things, it makes it easier to specify column data types and will give useful warnings when it encounters problematic data cells. Read more here: [https://github.com/tidyverse/readr](https://github.com/tidyverse/readr)
 
 ### readxl
 

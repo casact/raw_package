@@ -3,8 +3,7 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 library(dplyr)
-FetchHurricaneData <- function(strHurricaneFile){
-  url = "ftp://eclipse.ncdc.noaa.gov/pub/ibtracs/v03r04/wmo/csv/basin/Basin.NA.ibtracs_wmo.v03r04.csv"
+FetchHurricaneData <- function(url, strHurricaneFile){
   
   download.file(url, destfile = strHurricaneFile)
   
@@ -21,11 +20,12 @@ FetchHurricaneData <- function(strHurricaneFile){
   df
 }
 
+url <- "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/ibtracs.NA.list.v04r00.csv"
 strHurricaneFile <- "data-raw/Hurricane.csv"
 
 if (TRUE) {
   
-  df <- FetchHurricaneData(strHurricaneFile)
+  df <- FetchHurricaneData(url, strHurricaneFile)
   
   df <- df[, c("Year", "Number", "Name", "ISO_Time", "Latitude", "Longitude"
                , "Wind", "Pressure")]
