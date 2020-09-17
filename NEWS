@@ -1,3 +1,19 @@
+raw 0.1.8 (Release date:2020-09-17)
+===============================
+* Fix a few more hyperlinks
+* Change URL for site
+* Clarify license in DESCRIPTION
+
+raw 0.1.7 (Release date:2020-09-15)
+===============================
+* Add explicit reference to MPL 2 license
+* Ensure that hyperlinks are valid
+
+raw 0.1.7 (Release date:2020-09-15)
+===============================
+* Add randomForest and randomNames to the list of suggested packages
+* Correct error in vignette
+
 raw 0.1.6 (Release date:2018-04-)
 ===============================
 * Add insuranceData to the list of suggested packages
