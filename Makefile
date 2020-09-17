@@ -14,8 +14,9 @@ package_build:all_data
 	Rscript -e "devtools::install()"
 
 build_site:
+	Rscript -e "pkgdown::clean_site()"
 	Rscript -e "pkgdown::build_site()"
-	cp -rTu ./inst/web/ ~/projects/websites/raw_package/
+	cp -rTu docs/ ~/projects/websites/raw_package/
 
 all_data: $(NAIC_DATA) data/MultiTri.rda $(STATE_REGION) data/Hurricane.rda data/NJM_WC.rda $(COTOR) data/PPA.rda
 
