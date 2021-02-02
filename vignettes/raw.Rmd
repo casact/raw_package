@@ -136,7 +136,7 @@ There are a number of packages to read and write Excel files (`xlsx` and `XLConn
 
 ### tidyr 
 
-tidyr is a light but useful set of functions to manipulate data. You'll most often see the `spread` and `gather` functions used to transform a data set between "long" and "wide" formats. There's a short intro here: [https://blog.rstudio.org/2014/07/22/introducing-tidyr/](https://blog.rstudio.org/2014/07/22/introducing-tidyr/).
+tidyr is a light but useful set of functions to manipulate data. You'll most often see the `spread` and `gather` functions used to transform a data set between "long" and "wide" formats. There's a short intro here: [https://blog.rstudio.com/2014/07/22/introducing-tidyr/](https://blog.rstudio.com/2014/07/22/introducing-tidyr/).
 
 ### ggplot2
 
@@ -175,11 +175,11 @@ devtools::install_github("PirateGrunt/raw")
 
 ### knitr
 
-The [knitr](http://yihui.name/knitr/) package, written by Yihue Xie, enables a user to combine R code and documentation in a single file. That file may then be converted into a format like PDF, HTML or Word. 
+The [knitr](https://yihui.org/knitr/) package, written by Yihue Xie, enables a user to combine R code and documentation in a single file. That file may then be converted into a format like PDF, HTML or Word. 
 
 ### rmarkdown
 
-This package enhances `knitr` to make the document conversion described above a bit easier. This is an incredibly powerful framework. Read more here: [http://rmarkdown.rstudio.com/](http://rmarkdown.rstudio.com/).
+This package enhances `knitr` to make the document conversion described above a bit easier. This is an incredibly powerful framework. Read more here: [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/).
 
 ## maps and maptools
 
