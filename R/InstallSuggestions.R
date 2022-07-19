@@ -155,7 +155,7 @@ PackageNeedsUpdating <- function(pkgs){
 #' 
 PackageDependencies <- function(x, type = c("Depends", "Imports", "Suggests", "Enhances", "LinkingTo"))
 {
-  if (length(x) > 1){
+  if (length(x) > 1) {
     warning("x has length > 1. Only the first element will be used.")
     x <- x[1]
   }
@@ -166,4 +166,46 @@ PackageDependencies <- function(x, type = c("Depends", "Imports", "Suggests", "E
   deps <- strsplit(deps, ",")[[1]]
   
   deps
+}
+
+#' InstallCASDatasets
+#' 
+#' @name InstallCASDatasets
+#' 
+#' @description InstallCASDatasets will install the `CASDatasets` package
+#' 
+#' @param verbose Display messages to the user?
+#'            
+#' @examples 
+#' 
+#' \dontrun{
+#'   InstallCASDatasets(verbose = FALSE)
+#' }
+#'
+#' @export
+#' 
+InstallCASDatasets <- function(verbose = TRUE) {
+
+  required_packages <- c('xts', 'sp')
+  need_to_install <- required_packages[!PackageIsInstalled(required_packages)]
+  
+  if (length(need_to_install) > 0) {
+    
+    if (verbose) message("About to install additional packages expected by CASDatasets")
+    
+    install.packages(
+      need_to_install, 
+      type = 'binary'
+    )
+  }
+  
+  if (PackageIsInstalled('CASDatasets')) {
+    message("CASDatasets is already installed. Enjoy!")
+  } else {
+    install.packages(
+      'CASdatasets', 
+      repos = 'http://cas.uqam.ca/pub/'
+    )
+  }
+  
 }
