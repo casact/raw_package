@@ -12,4 +12,8 @@ practicing actuaries will use routinely. Finally, there is an R markdown
 skeleton for basic reserve analysis.
 
     install.packages("raw")
-    InstallSuggestions()
+    raw::InstallSuggestions()
+
+For speedy install on Windows, you can use 
+
+    raw::InstallSuggestions(type = 'binary')

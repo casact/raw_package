@@ -4,11 +4,11 @@ Description: In order to facilitate R instruction for actuaries, we have organiz
   sets of publicly available data of interest to non-life actuaries. In addition, we suggest 
   a set of packages, which most practicing actuaries will use routinely. Finally, there is 
   an R markdown skeleton for basic reserve analysis.
-Version: 0.1.9
-Maintainer: Brian A. Fannin <captain@PirateGrunt.com>
+Version: 0.1.10
+Maintainer: Brian A. Fannin <bfannin@casact.org>
 Authors@R: person("Brian A.", "Fannin"
     , role = c("aut", "cre")
-    , email = "captain@PirateGrunt.com")
+    , email = "bfannin@casact.org")
 LazyData: true
 License: MPL-2.0 | file LICENSE
 Depends:
@@ -20,15 +20,21 @@ Suggests:
     clipr,
     dplyr,
     devtools,
+    faraway,
     FinCal,
     fitdistrplus,
     forcats,
+    gbm,
     ggplot2,
+    ggRandomForests,
+    gridExtra,
     insuranceData,
+    janitor,
     knitr,
     Lahman,
     lubridate,
     maps, 
+    markdown,
     mondate,
     nlme,
     nycflights13,
@@ -42,6 +48,7 @@ Suggests:
     rmarkdown,
     rpart,
     rpart.tree,
+    rpart.plot,
     scales,
     stringr,
     tibble,
