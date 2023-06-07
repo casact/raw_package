@@ -47,7 +47,6 @@ Suggests:
     RColorBrewer, 
     rmarkdown,
     rpart,
-    rpart.tree,
     rpart.plot,
     scales,
     stringr,
